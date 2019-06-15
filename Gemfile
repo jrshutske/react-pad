@@ -7,6 +7,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'jbuilder', '~> 2.5'

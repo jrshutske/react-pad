@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/bootstrap-ruby/rails-bootstrap-forms.git
+  revision: 7189467fd625a2284c366cb7495fda8e60e4698e
+  specs:
+    bootstrap_form (4.2.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -277,6 +285,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
+  bootstrap_form!
   byebug
   capybara (>= 2.15)
   chromedriver-helper
