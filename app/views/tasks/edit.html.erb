@@ -1,6 +1,7 @@
 <h1>Editing Task</h1>
 
-<%= render 'form', task: @task %>
+<%= render 'edit_form', task: @task, pad: @pad %>
 
-<%= link_to 'Show', @task %> |
-<%= link_to 'Back', tasks_path %>
+
+<%= link_to 'Show', pad_tasks_path(@task) %> |
+<%= link_to 'Back', pad_tasks_path %>
