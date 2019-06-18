@@ -1,8 +1,6 @@
-@import "bootstrap";
+@import 'bootstrap';
 @import 'rails_bootstrap_forms';
-
-@import "welcome";
-
+@import 'welcome';
 * {
   font-family: Tahoma;
   font-style: normal;
@@ -12,6 +10,13 @@
 .card {
   opacity: .9 !important;
 
+}
+.fa-th-list{
+  text-decoration: none !important;
+}
+
+div.container {
+  height: 100vh !important;
 }
 
 .vertical-center {
