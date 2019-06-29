@@ -5,12 +5,14 @@ class PadsController < ApplicationController
   # GET /pads.json
   def index
     @pads = Pad.all
+    @pad = Pad.new
   end
 
   # GET /pads/1
   # GET /pads/1.json
   def show
     @task = Task.new
+    @tasks = Task.where(pad_id: @pad.id)
   end
 
   # GET /pads/new

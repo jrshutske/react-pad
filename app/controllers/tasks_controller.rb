@@ -38,9 +38,11 @@ class TasksController < ApplicationController
   # PATCH/PUT /tasks/1.json
   def update
     if @task.update(task_params)
-      redirect_to pad_tasks_path(@pad.id), notice: 'Task was successfully updated.'
+      # binding.pry
+      redirect_to @pad, notice: 'Task was successfully updated.'
     else
-      render :edit
+      redirect_to @pad
+      flash[:alert] = @task.errors.full_messages.to_sentence
     end
   end
 

@@ -1,3 +1,8 @@
+<div class="card">
+  <h5 class="card-header">
+    Editing Pad
+  </h5>
+  <div class="card-body">
 <%= bootstrap_form_with(model: pad, local: true) do |form| %>
   <% if pad.errors.any? %>
     <div id="error_explanation">
@@ -15,4 +20,6 @@
     <%= form.hidden_field :created_by_id, value: current_user.id %>
     <%= form.submit %>
   </div>
-<% end %>
+  <% end %>
+  </div>
+</div>
