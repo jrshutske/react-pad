@@ -26,11 +26,12 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(task_params)
-      if @task.save
-        redirect_to new_pad_task_path(@pad), notice: 'Sample was successfully created.', notice: 'Task was successfully created.'
-      else
-        render :new
-      end
+    if @task.save
+      redirect_to @pad, notice: 'Task was successfully created.'
+    else
+      redirect_to @pad
+      flash[:alert] = @task.errors.full_messages.to_sentence
+    end
   end
 
   # PATCH/PUT /tasks/1

@@ -10,6 +10,7 @@ class PadsController < ApplicationController
   # GET /pads/1
   # GET /pads/1.json
   def show
+    @task = Task.new
   end
 
   # GET /pads/new

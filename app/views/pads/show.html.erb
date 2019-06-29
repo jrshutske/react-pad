@@ -12,3 +12,22 @@
 
 <%= link_to 'Edit', edit_pad_path(@pad) %> |
 <%= link_to 'Back', pads_path %>
+
+<%= bootstrap_form_for(@task, url: pad_tasks_path(@pad, @task)) do |form| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(t@ask.errors.count, "error") %> prohibited this task from being saved:</h2>
+      <ul>
+      <% @task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= form.text_field :name %>
+    <%= form.check_box :complete %>
+    <%= form.hidden_field :created_by_id, value: current_user.id %>
+    <%= form.hidden_field :pad_id, value: @pad.id %>
+    <%= form.submit %>
+<% end %>
+
